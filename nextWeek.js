@@ -6,18 +6,18 @@
     var match = /Semaine[\s][\d]+[\s]du[\s]([\d]{2})\/([\d]{2})\/([\d]{4})[\s]au[\s].*/gi.exec(weekTitle);
 
     // Create current start week date
-    var currentStartWeek = new Date(match[3], match[2], match[1]);
+    var currentStartWeek = new Date(match[3], match[2] - 1, match[1]);
 
     // Create next start week date
     var nextStartWeek = new Date(currentStartWeek);
     nextStartWeek.setDate(currentStartWeek.getDate() + 8);
 
     // Create code to execute
-    var actualCode = "fcSelectionnerDate('" + nextStartWeek.toISOString().split('T')[0].replace(/-/gi, '') + "');"
+    var code = "fcSelectionnerDate('" + nextStartWeek.toISOString().split('T')[0].replace(/-/gi, '') + "');"
 
     // Execute code
     var script = document.createElement('script');
-    script.textContent = actualCode;
+    script.textContent = code;
     (document.head || document.documentElement).appendChild(script);
     script.parentNode.removeChild(script);
 
