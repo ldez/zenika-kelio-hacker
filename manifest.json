@@ -19,13 +19,13 @@
     },
 
     "icons": {
-        "16": "image/kelio16.png",
-        "48": "image/kelio48.png",
-        "64": "image/kelio64.png"
+        "16": "icons/kelio16.png",
+        "48": "icons/kelio48.png",
+        "64": "icons/kelio64.png"
     },
 
     "page_action": {
-        "default_icon": "image/kelio16.png",
+        "default_icon": "icons/kelio16.png",
         "default_title": "Zenika Kelio Hacker",
         "default_popup": "popup.html"
     },
