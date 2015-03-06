@@ -1,0 +1,38 @@
+{
+    "manifest_version": 2,
+
+    "name": "zenika-kelio-hacker",
+    "version": "1.0.0",
+    "author": "ldez",
+
+    "description": "Hack pour Kelio",
+
+    "options_ui": {
+        "chrome_style": true,
+        "page": "options.html"
+    },
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+    "icons": {
+        "16": "kelio16.png",
+        "48": "kelio48.png",
+        "64": "kelio64.png"
+    },
+
+    "page_action": {
+        "default_icon": "kelio16.png",
+        "default_title": "Zenika Kelio Hacker",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "http://*/*",
+        "declarativeContent",
+        "tabs",
+        "<all_urls>"
+      ]
+}
