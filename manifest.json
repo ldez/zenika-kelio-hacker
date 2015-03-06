@@ -30,7 +30,6 @@
     },
 
     "permissions": [
-        "http://*/*",
         "declarativeContent",
         "tabs",
         "<all_urls>"
