@@ -4,7 +4,7 @@
 
         chrome.tabs.getSelected(null, function (tab) {
             chrome.tabs.executeScript({
-                file: 'showAll.js'
+                file: 'action/showAll.js'
             });
 
         });
@@ -14,7 +14,7 @@
 
         chrome.tabs.getSelected(null, function (tab) {
             chrome.tabs.executeScript({
-                file: 'nextWeek.js'
+                file: 'action/nextWeek.js'
             });
         });
     }, true);
