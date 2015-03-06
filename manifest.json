@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "zenika-kelio-hacker",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "author": "ldez",
     "homepage_url": "https://github.com/ldez/zenika-kelio-hacker",
 
@@ -27,7 +27,7 @@
     "page_action": {
         "default_icon": "icons/kelio16.png",
         "default_title": "Zenika Kelio Hacker",
-        "default_popup": "popup.html"
+        "default_popup": "menu-bar/popup.html"
     },
 
     "permissions": [

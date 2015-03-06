@@ -1,0 +1,12 @@
+.btn {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.hidden {
+    display: none;
+}
+
+.icons-bar {
+    width: 130px;
+}
