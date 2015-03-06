@@ -21,7 +21,7 @@ Hack de Kelio pour faire de la saisie en avance de phase.
 
 ## Contributions ##
 
-Merci à Nicolas pour l'idée de transformer le code en une extension, Matthieu pour le nom, Hugo pour le code review.
+Merci à Gwennael pour l'idée orginel, Nicolas pour l'idée de transformer le code en une extension, Matthieu pour le nom, Hugo pour le code review.
 
 Et merci aux expressions régulières !
 
