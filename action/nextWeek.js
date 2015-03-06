@@ -1,4 +1,6 @@
 (function () {
+    'use strict';
+
     // Semaine 11 du 09/03/2015 au 15/03/2015
     var weekTitle = document.querySelector('#tableContainer td.filtre').innerText;
 
@@ -13,7 +15,7 @@
     nextStartWeek.setDate(currentStartWeek.getDate() + 8);
 
     // Create code to execute
-    var code = "fcSelectionnerDate('" + nextStartWeek.toISOString().split('T')[0].replace(/-/gi, '') + "');"
+    var code = 'fcSelectionnerDate(\'' + nextStartWeek.toISOString().split('T')[0].replace(/-/gi, '') + '\')';
 
     // Execute code
     var script = document.createElement('script');
@@ -21,7 +23,7 @@
     (document.head || document.documentElement).appendChild(script);
     script.parentNode.removeChild(script);
 
-    /* 
+    /*
      * How extract previous week link data (feature ?)
      */
     //var oldHref = document.querySelector('.tableContainer .filtre a').href;

@@ -1,4 +1,5 @@
 (function () {
+    'use strict';
 
     var elts = document.querySelectorAll('.tabPair input,.tabImpair input');
 
