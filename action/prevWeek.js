@@ -1,19 +1,29 @@
 (function () {
     'use strict';
 
-    /*
-     * How extract previous week link data (feature ?)
-     */
-    var oldHref = document.querySelector('.tableContainer .filtre a').href;
+    // extract the current code from the previous week button
+    var prevWeekCode = document.querySelector('.tableContainer .filtre a').href;
 
-    var match = /javascript:(fcSelectionnerDate\('[\d]{8}'\))/ig.exec(oldHref);
+    /**
+     * Extract valid javascript code from anchor code
+     *
+     * @param   {String} rawCode Anchor code
+     * @returns {String} valid javascript code
+     */
+    function extractCode(rawCode) {
+
+        // parse code to extract function call
+        var match = /javascript:(fcSelectionnerDate\('[\d]{8}'\))/ig.exec(rawCode);
 
         // Create code to execute
-    var code = match[1];
+        return match[1];
+    }
+
 
     // Execute code
     var script = document.createElement('script');
-    script.textContent = code;
+    script.textContent = extractCode(prevWeekCode);
+
     (document.head || document.documentElement).appendChild(script);
     script.parentNode.removeChild(script);
 
