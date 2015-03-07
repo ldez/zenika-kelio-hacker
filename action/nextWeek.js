@@ -7,19 +7,19 @@
      * @param   {String} title Week title
      * @returns {Date}   beginning date of the next week
      */
-    function createNextStartWeek(title) {
+    function createNextWeekStart(title) {
 
         // Split week title to extract date fields
         var match = /Semaine[\s][\d]+[\s]du[\s]([\d]{2})\/([\d]{2})\/([\d]{4})[\s]au[\s].*/gi.exec(title);
 
         // Create beginning date of the current week
-        var currentStartWeek = new Date(match[3], match[2] - 1, match[1]);
+        var currentWeekStart = new Date(match[3], match[2] - 1, match[1]);
 
         // Create beginning date of the next week
-        var nextStartWeek = new Date(currentStartWeek);
-        nextStartWeek.setDate(currentStartWeek.getDate() + 8);
+        var nextWeekStart = new Date(currentWeekStart);
+        nextWeekStart.setDate(currentWeekStart.getDate() + 8);
 
-        return nextStartWeek;
+        return nextWeekStart;
     }
 
     /**
@@ -45,11 +45,11 @@
     var weekTitle = document.querySelector('#tableContainer td.filtre').innerText;
 
     // Create beginning date of the next week
-    var nextStartWeek = createNextStartWeek(weekTitle);
+    var nextWeekStart = createNextWeekStart(weekTitle);
 
     // Execute code
     var script = document.createElement('script');
-    script.textContent = createScript(nextStartWeek);
+    script.textContent = createScript(nextWeekStart);
 
     (document.head || document.documentElement).appendChild(script);
     script.parentNode.removeChild(script);
