@@ -1,32 +1,20 @@
 (function () {
     'use strict';
 
-    document.getElementById('zenhacker-kelio-show').addEventListener('click', function () {
+    function registerAction(elementId, script) {
+        document.getElementById(elementId).addEventListener('click', function () {
 
-        chrome.tabs.getSelected(null, function () {
-            chrome.tabs.executeScript({
-                file: 'action/showAll.js'
+            chrome.tabs.getSelected(null, function () {
+                chrome.tabs.executeScript({
+                    file: script
+                });
+
             });
+        }, true);
+    }
 
-        });
-    }, true);
-
-    document.getElementById('zenhacker-kelio-next-week').addEventListener('click', function () {
-
-        chrome.tabs.getSelected(null, function () {
-            chrome.tabs.executeScript({
-                file: 'action/nextWeek.js'
-            });
-        });
-    }, true);
-
-    document.getElementById('zenhacker-kelio-prev-week').addEventListener('click', function () {
-
-        chrome.tabs.getSelected(null, function () {
-            chrome.tabs.executeScript({
-                file: 'action/prevWeek.js'
-            });
-        });
-    }, true);
+    registerAction('zenhacker-kelio-show', 'action/showAll.js');
+    registerAction('zenhacker-kelio-next-week', 'action/nextWeek.js');
+    registerAction('zenhacker-kelio-prev-week', 'action/prevWeek.js');
 
 })();
