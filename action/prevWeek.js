@@ -19,7 +19,6 @@
         return match[1];
     }
 
-
     // Execute code
     var script = document.createElement('script');
     script.textContent = extractCode(prevWeekCode);
