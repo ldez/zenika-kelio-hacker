@@ -14,8 +14,8 @@
             input.removeAttribute('style');
         }
         // if the visibility of the input does not need to be modified
-        else if (!input.classList.contains('already-enabled')) {
-            input.classList.add('already-enabled');
+        else if (!input.classList.contains('fix-field') && !input.classList.contains('fix-visibility')) {
+            input.classList.add('fix-visibility');
         }
         input.classList.add('fix-field');
         input.value = 100;
@@ -30,10 +30,11 @@
         // if the field is visible
         if (!input.readOnly) {
             // if the visibility of the input has not been modified or if the input does need to be modified
-            if (input.classList.contains('fix-field') && !input.classList.contains('already-enabled')) {
+            if (input.classList.contains('fix-field') && !input.classList.contains('fix-visibility')) {
                 input.readOnly = true;
                 input.disabled = true;
                 input.style.display = 'none';
+                input.classList.remove('fix-field');
             }
             input.value = null;
         }
