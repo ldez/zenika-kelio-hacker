@@ -1,4 +1,4 @@
-(function () {
+(function (window, document, chrome) {
     'use strict';
 
     /*
@@ -27,4 +27,4 @@
         });
     });
 
-})();
+})(window, document, window.chrome);

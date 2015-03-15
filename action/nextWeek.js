@@ -1,4 +1,4 @@
-(function () {
+(function (window, document, undefined) {
     'use strict';
 
     /**
@@ -54,4 +54,4 @@
     (document.head || document.documentElement).appendChild(script);
     script.parentNode.removeChild(script);
 
-})();
+})(window, document);

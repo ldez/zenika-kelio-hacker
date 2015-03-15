@@ -1,4 +1,4 @@
-(function () {
+(function (window, document, undefined) {
     'use strict';
 
     var elts = document.querySelectorAll('.scrollPane input[type="text"]');
@@ -10,4 +10,4 @@
         input.classList.remove('fix-visibility');
     });
 
-})();
+})(window, document);

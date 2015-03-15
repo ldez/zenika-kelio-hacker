@@ -1,4 +1,4 @@
-(function () {
+(function (window, document, undefined) {
     'use strict';
 
     // extract the current code from the previous week button
@@ -26,4 +26,4 @@
     (document.head || document.documentElement).appendChild(script);
     script.parentNode.removeChild(script);
 
-})();
+})(window, document);

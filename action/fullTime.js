@@ -1,4 +1,4 @@
-(function () {
+(function (window, document, undefined) {
     'use strict';
 
     /**
@@ -117,4 +117,4 @@
      */
     Array.prototype.forEach.call(document.querySelectorAll('#sactScrollTblBody>tbody>tr>td:nth-child(2)>table>tbody>tr>td:nth-child(5)'), buildActionsButtons);
 
-})();
+})(window, document);

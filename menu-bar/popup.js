@@ -1,4 +1,4 @@
-(function () {
+(function (window, document, chrome) {
     'use strict';
 
     /**
@@ -31,4 +31,4 @@
     // Action 'FullTime'
     registerAction('zenhacker-kelio-fulltime', 'action/fullTime.js');
 
-})();
+})(window, document, window.chrome);
