@@ -69,17 +69,17 @@
      */
     function appendActionButton(cell, btnClass, btnText, callback) {
 
-        // create 'fulltime' button
+        // create button
         var btn = document.createElement('button');
         btn.classList.add(btnClass);
         btn.innerText = btnText;
 
-        // add 'fulltime' button event
+        // add button event
         btn.addEventListener('click', function () {
             action(cell, callback);
         }, true);
 
-        // append 'fulltime' button
+        // append button
         cell.appendChild(btn);
     }
 
@@ -93,7 +93,7 @@
         // extract row
         var row = rootElement.parentNode;
 
-        // try to find 'fulltime' button
+        // try to find 'fulltime' cell
         var cell = row.querySelector('.fulltime-zone');
         if (!cell) {
 
