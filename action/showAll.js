@@ -7,6 +7,7 @@
         input.readOnly = false;
         input.disabled = false;
         input.removeAttribute('style');
+        input.classList.remove('fix-field');
     });
 
 })();

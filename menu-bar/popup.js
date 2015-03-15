@@ -28,4 +28,7 @@
     // Action 'PrevWeek'
     registerAction('zenhacker-kelio-prev-week', 'action/prevWeek.js');
 
+    // Action 'FullTime'
+    registerAction('zenhacker-kelio-fulltime', 'action/fullTime.js');
+
 })();

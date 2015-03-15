@@ -10,6 +10,10 @@ Hack de Kelio pour faire de la saisie en avance de phase.
 
 - Ajoute la fonction "Semaine suivante"
 - Rend visible les champs de saisie cachés.
+- Rend visible les champs du lundi au vendredi et les met automantiquement à 100
+- Supprime tous les temps saisies du lundi au vendredi pour une affectation
+
+![](help02.png)
 
 ## Installation ##
 
