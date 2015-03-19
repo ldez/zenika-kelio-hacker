@@ -4,24 +4,24 @@
 
 ## Description ##
 
-Extention pour Google Chrome.
+Extension pour Google Chrome.
 
 Hack de Kelio pour faire de la saisie en avance de phase.
 
 - Ajoute la fonction "Semaine suivante"
 - Rend visible les champs de saisie cachés.
-- Rend visible les champs du lundi au vendredi et les met automantiquement à 100
+- Rend visible les champs du lundi au vendredi et les met automatiquement à 100
 - Supprime tous les temps saisies du lundi au vendredi pour une affectation
 
 ![](help02.png)
 
 ## Installation ##
 
-- Récupperer le code (zip ou git clone)
+- Récupérer le code (zip ou git clone)
 - Paramètres > Extensions
 - Cocher "Mode développeur"
 - Cliquer sur "Charger l'extension non empaquetée..."
-- Selectionner le dossier de l'extension.
+- Sélectionner le dossier de l'extension.
 
 ## Contributions ##
 
