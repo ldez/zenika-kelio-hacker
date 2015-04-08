@@ -7,6 +7,7 @@
      * @param {Object} input HTML element 'input'
      */
     function fixValue(input) {
+
         // if the visibility of the input does need to be modified
         if (input.disabled || input.readOnly || input.style.border) {
             input.disabled = false;
@@ -19,6 +20,21 @@
         }
         input.classList.add('fix-field');
         input.value = 100;
+        fixHiddenState(input, true);
+    }
+
+    /**
+     * Change hidden state
+     * (Input caché pour savoir si la journée a été modifié ou non)
+     *
+     * @param {Object}  input input HTML element 'input'
+     * @param {Boolean} state new input hidden state
+     */
+    function fixHiddenState(input, state) {
+        var match = /#[\w]+_[\w]+_(\d+)_[\w]+_[\w]+/i.exec(input.name);
+        var inputHiddenId = '#modif_jour_' + match[1];
+        var inputHidden = document.querySelector(inputHiddenId);
+        inputHidden.value = state;
     }
 
     /**
@@ -37,6 +53,7 @@
                 input.classList.remove('fix-field');
             }
             input.value = null;
+            fixHiddenState(input, false);
         }
     }
 
