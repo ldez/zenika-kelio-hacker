@@ -19,8 +19,9 @@
             input.classList.add('fix-visibility');
         }
         input.classList.add('fix-field');
-        input.value = 100;
+
         fixHiddenState(input, true);
+        input.value = 100;
     }
 
     /**
@@ -34,7 +35,10 @@
         var match = /#[\w]+_[\w]+_(\d+)_[\w]+_[\w]+/i.exec(input.name);
         var inputHiddenId = '#modif_jour_' + match[1];
         var inputHidden = document.querySelector(inputHiddenId);
-        inputHidden.value = state;
+
+        if (input.value || state) {
+            inputHidden.value = state;
+        }
     }
 
     /**
@@ -52,8 +56,10 @@
                 input.style.display = 'none';
                 input.classList.remove('fix-field');
             }
+
+            fixHiddenState(input, !!input.value);
             input.value = null;
-            fixHiddenState(input, false);
+
         }
     }
 
